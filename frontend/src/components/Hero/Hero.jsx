@@ -14,7 +14,9 @@ const Hero = () => {
           more.
         </p>
       </div>
-      <img src={BgPlanes} alt="" />
+      <img className="bgPlanesLand" src={BgPlanes} alt="" />
+      <img className="bgMockupsLand" src={Mockups} alt="" />
+      <div className="heroBg"></div>
     </section>
   );
 };

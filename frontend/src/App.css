@@ -10,6 +10,8 @@
 }
 
 body {
+    width: 100%;
     font-family: 'Public Sans', sans-serif;
     color: hsl(233, 8%, 62%);
+    overflow-x: hidden;
 }

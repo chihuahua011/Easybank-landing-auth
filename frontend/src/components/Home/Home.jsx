@@ -12,15 +12,15 @@ const Home = () => {
         <img src={Logo} alt="" />
         <div className="linksCont">
           <Link to="/">Home</Link>
-          <Link>About</Link>
-          <Link>Contact</Link>
-          <Link>Careers</Link>
+          <Link to="/">About</Link>
+          <Link to="/">Contact</Link>
+          <Link to="/">Careers</Link>
         </div>
         <Link id="regBtn" to="/register">Register</Link>
       </div>
       <Switch>
         <Route path="/register">
-          <RegisterPage />
+          <Register />
         </Route>
         <Route path="/">
           <LandPage />
@@ -29,13 +29,5 @@ const Home = () => {
     </Router>
   );
 };
-
-function RegisterPage() {
-  return <Register />
-}
-
-function LandingPage() {
-  return <LandPage />
-}
 
 export default Home;
