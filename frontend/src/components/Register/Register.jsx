@@ -11,14 +11,14 @@ const Register = () => {
   const [regEmail, setRegEmail] = useState("");
   const [regPass, setRegPass] = useState("");
 
-  const regSubmit = async () => {
+  const regSubmit = () => {
     axios
       .post("http://localhost:8000/api/register", {
         name: regName,
         email: regEmail,
         password: regPass,
       })
-      .then(await function(res) {
+      .then((res) => {
         if (res.status === 201)
           toast.success("Successful registration", {
             position: toast.POSITION.BOTTOM_CENTER,
@@ -51,7 +51,7 @@ const Register = () => {
           <input
             required
             className="input"
-            type="text"
+            type="email"
             placeholder="Email"
             onChange={(e) => setRegEmail(e.target.value)}
           />
