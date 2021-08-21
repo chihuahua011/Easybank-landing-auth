@@ -26,11 +26,11 @@ const Register = () => {
       })
       .catch((err) => {
         if (err.response.status === 400)
-          toast.warn("Already registered credentials!", {
+          toast.error("Already registered user!", {
             position: toast.POSITION.BOTTOM_CENTER,
           });
         if (err.response.status === 409)
-            toast.warn("Please fill out all fields!", {
+            toast.error("Please fill out all fields!", {
             position: toast.POSITION.BOTTOM_CENTER,
           });
       });
@@ -40,6 +40,7 @@ const Register = () => {
     <>
       <section id="regSection">
         <div id="regCont">
+            <p>Registration form</p>
           <input
             required
             className="input"
@@ -64,6 +65,7 @@ const Register = () => {
           <button className="regSubmit" onClick={regSubmit}>
             Submit
           </button>
+          <p>All fields are required!</p>
         </div>
         <img className="mockups" src={Mockups} alt="" />
         <img className="bgPlanes" src={BgPlanes} alt="" />
