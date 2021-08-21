@@ -40,7 +40,7 @@ const Register = () => {
     <>
       <section id="regSection">
         <div id="regCont">
-            <p>Registration form</p>
+            <p className="regP" >Registration form</p>
           <input
             required
             className="input"
@@ -65,7 +65,7 @@ const Register = () => {
           <button className="regSubmit" onClick={regSubmit}>
             Submit
           </button>
-          <p>All fields are required!</p>
+          <p className="regP" >All fields are required!</p>
         </div>
         <img className="mockups" src={Mockups} alt="" />
         <img className="bgPlanes" src={BgPlanes} alt="" />

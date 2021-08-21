@@ -91,14 +91,14 @@
   z-index: -3;
 }
 
-p:first-child {
+.regP:first-child {
   position: absolute;
   top: 20px;
   color: #31d35c;
   font-weight: 700;
 }
 
-p:last-child {
+.regP:last-child {
   position: absolute;
   bottom: 20px;
   color: #da2b2b;
