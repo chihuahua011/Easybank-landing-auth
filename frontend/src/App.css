@@ -1,1 +1,15 @@
+* {
+    margin:0; 
+    padding:0; 
+    border:0; 
+    background:transparent; 
+    outline:none; 
+    text-decoration:none; 
+    font-family:inherit; 
+    box-sizing:border-box;
+}
 
+body {
+    font-family: 'Public Sans', sans-serif;
+    color: hsl(233, 8%, 62%);
+}

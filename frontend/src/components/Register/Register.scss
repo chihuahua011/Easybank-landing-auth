@@ -1,0 +1,83 @@
+#regSection {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+#regCont {
+  margin: 80px auto 0 auto;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border: #31d35c 2px solid;
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffffd5;
+  z-index: 100;
+}
+
+.input {
+  width: 200px;
+  height: 30px;
+  border: #999999 1px solid;
+  border-radius: 5px;
+  background-color: hsl(220, 16%, 96%);
+  margin: 0 0 20px 0;
+  padding: 5px;
+}
+
+.regSubmit {
+  width: 100px;
+  height: 30px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(
+    90deg,
+    hsl(136, 65%, 51%) 0%,
+    hsl(192, 70%, 51%) 100%
+  );
+  border-radius: 20px;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+      opacity: 0.6;
+  }
+}
+
+.bgPlanes {
+    position: absolute;
+    width: 743px;
+    top: 0;
+    right: 0;
+    object-fit: none;
+    object-position: 0 70%;
+    z-index: -2;
+}
+
+.mockups {
+    position: absolute;
+    height: 777px;
+    top: 0;
+    right: 0;
+    object-fit: none;
+    object-position: 0 100%;
+    z-index: -1;
+}
+
+.regBg {
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    background: linear-gradient(
+        180deg,
+        hsl(220, 16%, 96%) 0%,
+        hsl(0, 0%, 100%) 100%
+    );
+    z-index: -3;
+}
