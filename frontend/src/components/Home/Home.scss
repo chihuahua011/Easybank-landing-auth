@@ -18,8 +18,9 @@ a {
 .header {
     display: grid;
     width: 100%;
-    grid-template-columns: 140px auto 160px;
+    grid-template-columns: 140px auto 160px 160px;
     grid-template-rows: 80px;
+    justify-items: center;
     align-items: center;
     background-color: #ffffff;
     z-index: 101;
@@ -52,7 +53,30 @@ a {
 }
 
 #regBtn {
-    justify-self: center;
+    margin: 0;
+    align-self: center;
+    padding: 10px 0 0 0;
+    width: 130px;
+    height: 40px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(
+        90deg,
+        hsl(136, 65%, 51%) 0%,
+        hsl(192, 70%, 51%) 100%
+    );
+    border-radius: 20px;
+    text-align: center;
+    transition: opacity 200ms ease-in-out;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+#logBtn {
+    margin: 0;
+    align-self: center;
     padding: 10px 0 0 0;
     width: 130px;
     height: 40px;

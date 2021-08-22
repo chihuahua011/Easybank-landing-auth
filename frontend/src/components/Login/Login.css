@@ -1,0 +1,25 @@
+#logSection {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+}
+
+.logSubmit {
+  margin: 10px 0 0 0;
+  width: 100px;
+  height: 30px;
+  font-weight: 700;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+.logSubmit:hover {
+  opacity: 0.6;
+}
+/*# sourceMappingURL=Login.css.map */

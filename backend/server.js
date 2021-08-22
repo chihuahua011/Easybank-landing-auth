@@ -29,14 +29,18 @@ app.use(cors({
 //ROUTES
 app.post("/api/register", async (req, res) => {
     const { name, email, password } = req.body;
+    const splitPass = password.split("");
     if(!(name && email && password)){
-        res.status(409).json({msg: "Fill out all inputs"});
+        res.status(400).json({msg: "Fill out all inputs"});
         return;
     }
     if(req.body === undefined) {
         res.status(500).json({msg: "Data could not be processed"});
         return;
     }
+    if(splitPass.length <= 5) {
+        return res.status(400).json({ msg: "Password too short" })
+    } 
     User.findOne({ email: email }, async (error, doc) => {
         if(error) throw error;
         if(doc) res.status(400).json({ msg: "Already registered email" });
@@ -52,6 +56,10 @@ app.post("/api/register", async (req, res) => {
         };
     })
 });
+
+app.post("/api/login", async (req, res) => {
+    console.log(req.body)
+})
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

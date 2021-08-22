@@ -3,6 +3,7 @@ import "./Home.css";
 import Logo from "../../images/logo.svg"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Register from "../Register/Register";
+import Login from "../Login/Login";
 import LandPage from "../Landingpage/LandPage";
 
 const Home = () => {
@@ -17,10 +18,14 @@ const Home = () => {
           <Link to="/">Careers</Link>
         </div>
         <Link id="regBtn" to="/register">Register</Link>
+        <Link id="logBtn" to="/login">Login</Link>
       </div>
       <Switch>
         <Route path="/register">
           <Register />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         <Route path="/">
           <LandPage />

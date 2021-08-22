@@ -23,14 +23,23 @@ const Register = () => {
           toast.success("Successful registration", {
             position: toast.POSITION.BOTTOM_CENTER,
           });
+          console.log("Registration success")
       })
       .catch((err) => {
-        if (err.response.status === 400)
+        if (err.response.data.msg === "Already registered email")
           toast.error("Already registered user!", {
             position: toast.POSITION.BOTTOM_CENTER,
           });
-        if (err.response.status === 409)
+        if (err.response.data.msg === "Password too short")
+          toast.error("Password should be at least 6 characters long!", {
+            position: toast.POSITION.BOTTOM_CENTER,
+          });
+        if (err.response.data.msg === "Fill out all inputs")
             toast.error("Please fill out all fields!", {
+            position: toast.POSITION.BOTTOM_CENTER,
+          });
+        if (err.response.status === 500)
+          toast.error("Data could not be processed!", {
             position: toast.POSITION.BOTTOM_CENTER,
           });
       });
