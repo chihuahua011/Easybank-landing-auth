@@ -72,6 +72,10 @@ a {
     &:hover {
         opacity: 0.6;
     }
+
+    &.loggedIN {
+        display: none;
+    }
 }
 
 #logBtn {
@@ -94,4 +98,38 @@ a {
     &:hover {
         opacity: 0.6;
     }
+
+    &.loggedIN {
+        display: none;
+    }
+}
+
+#logOut {
+    margin: 0;
+    align-self: center;
+    grid-column: 4;
+    width: 130px;
+    height: 40px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(
+        90deg,
+        hsl(136, 65%, 51%) 0%,
+        hsl(192, 70%, 51%) 100%
+    );
+    border-radius: 20px;
+    text-align: center;
+    transition: opacity 200ms ease-in-out;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &.loggedOUT {
+        display: none
+    }
+}
+
+p.loggedOUT {
+    display: none;
 }

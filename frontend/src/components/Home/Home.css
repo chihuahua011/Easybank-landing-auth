@@ -82,6 +82,10 @@ a:hover {
   opacity: 0.6;
 }
 
+#regBtn.loggedIN {
+  display: none;
+}
+
 #logBtn {
   margin: 0;
   -ms-flex-item-align: center;
@@ -102,5 +106,40 @@ a:hover {
 
 #logBtn:hover {
   opacity: 0.6;
+}
+
+#logBtn.loggedIN {
+  display: none;
+}
+
+#logOut {
+  margin: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column: 4;
+  grid-column: 4;
+  width: 130px;
+  height: 40px;
+  font-weight: 700;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
+  border-radius: 20px;
+  text-align: center;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+#logOut:hover {
+  opacity: 0.6;
+}
+
+#logOut.loggedOUT {
+  display: none;
+}
+
+p.loggedOUT {
+  display: none;
 }
 /*# sourceMappingURL=Home.css.map */

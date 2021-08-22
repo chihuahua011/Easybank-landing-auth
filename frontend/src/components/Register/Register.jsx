@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Register.css";
+import { useHistory } from 'react-router';
 import BgPlanes from "../../images/bg-intro-desktop.svg";
 import Mockups from "../../images/image-mockups.png";
 import axios from "axios";
@@ -10,6 +11,11 @@ const Register = () => {
   const [regName, setRegName] = useState("");
   const [regEmail, setRegEmail] = useState("");
   const [regPass, setRegPass] = useState("");
+  const history = useHistory();
+
+  const redirect = () => {
+    return history.push("/login")
+  }
 
   const regSubmit = () => {
     axios
@@ -19,11 +25,13 @@ const Register = () => {
         password: regPass,
       })
       .then((res) => {
-        if (res.status === 201)
-          toast.success("Successful registration", {
+        if (res.status === 201) {
+          toast.success("Successful registration! Please wait!", {
             position: toast.POSITION.BOTTOM_CENTER,
           });
           console.log("Registration success")
+          setTimeout(redirect, 5000)
+        }
       })
       .catch((err) => {
         if (err.response.data.msg === "Already registered email")
