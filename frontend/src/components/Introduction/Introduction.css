@@ -1,0 +1,49 @@
+#introSect {
+  width: 100%;
+  height: 680px;
+  position: relative;
+  padding: 110px 0 0 60px;
+  background: #f3f4f6;
+  z-index: -4;
+}
+
+#introWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 75px;
+  width: 640px;
+}
+
+#introWrap h1 {
+  font-size: 2.3125rem;
+}
+
+#introWrap p {
+  font-size: 1.125rem;
+}
+
+.introList {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (255px)[4];
+      grid-template-columns: repeat(4, 255px);
+  -ms-grid-rows: 265px;
+      grid-template-rows: 265px;
+  gap: 30px;
+}
+
+.listItem img {
+  width: 70px;
+  margin: 0 0 40px 0;
+}
+
+.listItem h2 {
+  margin: 0 0 30px 0;
+}
+/*# sourceMappingURL=Introduction.css.map */

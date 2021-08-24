@@ -6,6 +6,7 @@ import "./Login.css";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import decode from "jwt-decode"
 
 const Login = () => {
   const [logEmail, setLogEmail] = useState("");
@@ -31,6 +32,7 @@ const Login = () => {
           localStorage.setItem("token", res.data.token);
           setTimeout(redirect, 5000);
           console.log(res.data);
+          console.log(decode(res.data.token))
         }
       })
       .catch((err) => {
