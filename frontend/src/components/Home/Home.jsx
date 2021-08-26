@@ -46,10 +46,7 @@ const Home = () => {
     })
     .then((res) => {
       if(res.status === 200) {
-        toast.success("Logout successful! Please wait!", {
-          position: toast.POSITION.BOTTOM_CENTER,
-        });
-        setTimeout(logOutFunc, 5000)
+        setTimeout(logOutFunc, 500)
       }
     })
     .catch((err) => {

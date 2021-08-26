@@ -26,11 +26,8 @@ const Login = () => {
       })
       .then((res) => {
         if (res.status === 200) {
-          toast.success("Login successful! Please wait!", {
-            position: toast.POSITION.BOTTOM_CENTER,
-          });
           localStorage.setItem("token", res.data.token);
-          setTimeout(redirect, 5000);
+          setTimeout(redirect, 500);
           console.log(res.data);
           console.log(decode(res.data.token))
         }

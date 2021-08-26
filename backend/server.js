@@ -87,7 +87,6 @@ app.post("/api/user", (req, res) => {
         const user = jwt.verify(token, process.env.TOKEN_KEY);
 
         res.status(200).json({ msg: "Valid token", user: user });
-        console.log(user);
     } catch (err) {
         res.status(401).json({ msg: "invalid token" });
     }

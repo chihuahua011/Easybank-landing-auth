@@ -82,14 +82,14 @@
   z-index: -3;
 }
 
-.regP:first-child {
+.regP {
   position: absolute;
   top: 20px;
   color: hsl(136, 65%, 51%);
   font-weight: 700;
 }
 
-.regP:last-child {
+.regPBottom {
   position: absolute;
   bottom: 20px;
   color: #da2b2b;

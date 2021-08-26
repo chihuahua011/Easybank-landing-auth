@@ -26,11 +26,8 @@ const Register = () => {
       })
       .then((res) => {
         if (res.status === 201) {
-          toast.success("Successful registration! Please wait!", {
-            position: toast.POSITION.BOTTOM_CENTER,
-          });
           console.log("Registration success")
-          setTimeout(redirect, 5000)
+          setTimeout(redirect, 500)
         }
       })
       .catch((err) => {
@@ -82,7 +79,7 @@ const Register = () => {
           <button className="regSubmit" onClick={regSubmit}>
             Submit
           </button>
-          <p className="regP" >All fields are required!</p>
+          <p className="regPBottom" >All fields are required!</p>
         </div>
         <img className="mockups" src={Mockups} alt="" />
         <img className="bgPlanes" src={BgPlanes} alt="" />
