@@ -18,24 +18,28 @@ a {
 .header {
     display: grid;
     width: 100%;
+    height: 80px;
     grid-template-columns: 160px auto 160px 160px;
-    grid-template-rows: 80px;
+    grid-template-rows: 100%;
     justify-items: center;
     align-items: center;
     background-color: #ffffff;
     z-index: 101;
+
+    & img {
+        z-index: 101;
+    }
 }
 
 .linksCont {
-    padding-top: 30px;
     width: 100%;
     height: 100%;
     display: flex;
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column: 2;
     grid-row: 1;
     justify-self: center;
     justify-content: center;
+    align-items: center;
 
     & a::before{
         content: "";
@@ -47,7 +51,7 @@ a {
         );
         width: 100%;
         height: 5px;
-        bottom: 0;
+        bottom: -10px;
         opacity: 0;
         transition: opacity 200ms ease-in-out;
     }
@@ -64,6 +68,7 @@ a {
     height: 40px;
     grid-column: 4;
     grid-row: 1;
+    z-index: 101;
     font-weight: 700;
     color: hsl(0, 0%, 100%);
     background: linear-gradient(
@@ -92,6 +97,7 @@ a {
     height: 40px;
     grid-column: 3;
     grid-row: 1;
+    z-index: 101;
     font-weight: 700;
     color: hsl(0, 0%, 100%);
     background: linear-gradient(
@@ -120,6 +126,7 @@ a {
     height: 40px;
     font-weight: 700;
     color: hsl(0, 0%, 100%);
+    z-index: 101;
     background: linear-gradient(
         90deg,
         hsl(136, 65%, 51%) 0%,
@@ -145,4 +152,168 @@ p.loggedOUT {
 p {
     grid-column: 3;
     grid-row: 1;
+}
+
+.hamBtn {
+    width: 25px;
+    height: 20px;
+    justify-self: center;
+    cursor: pointer;
+    display: none;
+
+    & span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin-bottom: 4px;
+        background-color: hsl(233, 26%, 24%);
+      }
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        position: fixed;
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .header {
+        grid-template-columns: 160px auto auto auto;
+    }
+
+    .linksCont {
+        position: absolute;
+        grid-column: unset;
+        flex-direction: column;
+        transform: translateY(-100px);
+        transition: transform 500ms ease-in-out;
+        visibility: hidden;
+
+        & a {
+            font-size: 16px;
+            margin: 0 0 20px 0;
+        }
+    }
+
+    #regBtn {
+        grid-column: 3;
+    }
+
+    #logBtn {
+        grid-column: 2;
+    }
+
+    .hamBtn {
+        display: block;
+        z-index: 101;
+    }
+
+    #hamMenu {
+        transform: translateY(130px);
+        z-index: 98;
+        animation: appear 200ms ease-in-out 1 forwards;
+    }
+
+    #hamMenuClosed {
+        z-index: 98;
+        animation: disappear 1s 1 forwards;
+    }
+
+    .headerBg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #fff;
+        z-index: 100;
+    }
+
+    #overlay {
+        position: absolute;
+        top: calc(0px + 65px);
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(3px);
+        background: linear-gradient(180deg, #f3f4f6 0%, #ffffff 70%, rgba(255, 255, 255, 0) 100%);
+        z-index: 97;
+
+        animation: overlay 500ms ease-in-out 1 forwards;
+    }
+
+    #overlayClosed {
+        position: absolute;
+        top: calc(0px + 65px);
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(180deg, #f3f4f6 0%, #ffffff 70%, rgba(255, 255, 255, 0) 100%);
+        backdrop-filter: blur(3px);
+        opacity: 0.7;
+        transform: translateY(-1000px);
+        transition-delay: 1s;
+        z-index: 97;
+
+        animation: overlayClosed 500ms ease-out 1 forwards;
+        animation-delay: 500ms;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        grid-template-columns: 160px auto;
+    }
+
+    #regBtn {
+        grid-column: unset;
+        transition: transform 500ms ease-in-out;
+        top: 240px;
+    }
+
+    #logBtn {
+        grid-column: unset;
+        transition: transform 500ms ease-in-out;
+        top: 300px;
+    }
+
+    .openLogBtn {
+        position: absolute;
+    }
+    .openRegBtn {
+        position: absolute;
+    }
+
+    .closedLogBtn {
+        position: absolute;
+        transform: translateX(500px);
+    }
+    .closedRegBtn {
+        position: absolute;
+        transform: translateX(-500px);
+    }
+
+    .hamBtn {
+        margin: 0 20px 0 0;
+        justify-self: flex-end;
+    }
+}
+
+@keyframes appear {
+    0% { visibility: hidden; }
+    1% { visibility: visible;}
+    100% { visibility: visible; }
+}
+
+@keyframes disappear {
+    0% { visibility: visible; }
+    99% { visibility: visible;}
+    100% { visibility: hidden; }
+}
+
+@keyframes overlay {
+    0% {opacity: 0;}
+    100% {opacity: 0.7;}
+}
+
+@keyframes overlayClosed {
+    0% {opacity: 0.7;}
+    100% {opacity: 0;}
 }

@@ -13,6 +13,7 @@ const Hero = () => {
           one-stop-shop for spending, saving, budgeting, investing, and much
           more.
         </p>
+        <div className="textBg"></div>
       </div>
       <img className="bgPlanesLand" src={BgPlanes} alt="" />
       <img className="bgMockupsLand" src={Mockups} alt="" />

@@ -6,12 +6,15 @@ import Register from "../Register/Register";
 import Login from "../Login/Login";
 import LandPage from "../Landingpage/LandPage";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const [logged, setLogged] = useState("loggedOUT");
   const [userName, setUserName] = useState("");
+  const [hamMenu, setHamMenu] = useState("");
+  const [overlay, setOverlay] = useState("");
+  const [regButton, setRegButton] = useState("closedRegBtn");
+  const [logButton, setLogButton] = useState("closedLogBtn");
 
   const token = localStorage.getItem("token")
   console.log(token)
@@ -54,22 +57,42 @@ const Home = () => {
     })
   }
 
+  const click = () => {
+    if(hamMenu === "hamMenuClosed") {
+      setHamMenu("hamMenu");
+      setOverlay("overlay");
+      setLogButton("openLogBtn");
+      setRegButton("openRegBtn")
+    } else {
+      setHamMenu("hamMenuClosed");
+      setOverlay("overlayClosed");
+      setLogButton("closedLogBtn");
+      setRegButton("closedRegBtn")
+    }
+  }
+
   return (
     <Router>
       <div className="header">
         <img src={Logo} alt="" />
-        <div className="linksCont">
+        <div className="headerBg"></div>
+        <div className="linksCont" id={hamMenu}>
           <Link to="/">Home</Link>
           <Link to="/">About</Link>
           <Link to="/">Contact</Link>
           <Link to="/">Careers</Link>
         </div>
-        <Link id="regBtn" to="/register" className={logged}>Register</Link>
-        <Link id="logBtn" to="/login" className={logged}>Login</Link>
+        <Link id="regBtn" to="/register" className={logged + " " + regButton}>Register</Link>
+        <Link id="logBtn" to="/login" className={logged + " " + logButton}>Login</Link>
         <p className={logged}>Welcome back {userName}!</p>
         <button id="logOut" className={logged} onClick={logOut}>Log out</button>
+        <button className="hamBtn" onClick={click}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div className="overlay" id={overlay}></div>
       </div>
-      <ToastContainer />
       <Switch>
         <Route path="/register">
           <Register />
