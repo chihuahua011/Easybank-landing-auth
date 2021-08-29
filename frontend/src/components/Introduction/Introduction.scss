@@ -23,7 +23,6 @@
 }
 
 .introList {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 255px);
     grid-template-rows: 265px;
@@ -38,5 +37,62 @@
 
     h2 {
         margin: 0 0 30px 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #introSect {
+        height: 950px;
+        display: flex;
+        flex-direction: column;
+        padding: 110px 40px 0 40px;
+
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    #introWrap {
+        width: 100%;
+    }
+
+    .introList {
+        align-self: center;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #introSect {
+        height: 1600px;
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+    .introList {
+        grid-template-columns: 100%;
+        grid-template-rows: unset;
+    }
+
+    .listItem {
+        display: flex;
+        flex-direction: column;
+        img {
+            align-self: center;
+        }
     }
 }

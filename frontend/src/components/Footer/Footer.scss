@@ -95,3 +95,46 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 900px) {
+    #footerSect {
+        height: 100%;
+        padding: 0 40px 0 40px;
+    }
+
+    #footerWrap {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: 100%;
+    
+        img {
+            margin: 47px 0 0 0;
+            justify-self: center;
+        }
+
+        .footerCont {
+            align-items: center;
+
+            a{
+                margin: 0;
+            }
+
+            p{
+                align-self: unset;
+            }
+        }
+    }
+
+    #reqBtn {
+        align-self: unset;
+    }
+
+    #icoCont {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #footerWrap {
+        grid-template-columns: 100%;
+    }
+}

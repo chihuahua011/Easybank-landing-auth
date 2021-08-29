@@ -9,8 +9,8 @@ const LandPage = () => {
         <>
             <Hero />
             <Introduction />
-            {/* <Articles />
-            <Footer /> */}
+            <Articles />
+            <Footer />
         </>
     );
 };

@@ -28,7 +28,6 @@
 }
 
 .introList {
-  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (255px)[4];
@@ -45,5 +44,72 @@
 
 .listItem h2 {
   margin: 0 0 30px 0;
+}
+
+@media screen and (max-width: 900px) {
+  #introSect {
+    height: 950px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 110px 40px 0 40px;
+  }
+  #introSect h1 {
+    font-size: 25px;
+  }
+  #introSect p {
+    font-size: 16px;
+  }
+  #introWrap {
+    width: 100%;
+  }
+  .introList {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #introSect {
+    height: 1600px;
+  }
+  #introSect h1 {
+    text-align: center;
+  }
+  #introSect h2 {
+    text-align: center;
+  }
+  #introSect p {
+    text-align: center;
+  }
+  .introList {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: unset;
+        grid-template-rows: unset;
+  }
+  .listItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .listItem img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 /*# sourceMappingURL=Introduction.css.map */

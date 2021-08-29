@@ -110,4 +110,52 @@
 #reqBtn.loggedIN {
   display: none;
 }
+
+@media screen and (max-width: 900px) {
+  #footerSect {
+    height: 100%;
+    padding: 0 40px 0 40px;
+  }
+  #footerWrap {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+  }
+  #footerWrap img {
+    margin: 47px 0 0 0;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  #footerWrap .footerCont {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #footerWrap .footerCont a {
+    margin: 0;
+  }
+  #footerWrap .footerCont p {
+    -ms-flex-item-align: unset;
+        -ms-grid-row-align: unset;
+        align-self: unset;
+  }
+  #reqBtn {
+    -ms-flex-item-align: unset;
+        -ms-grid-row-align: unset;
+        align-self: unset;
+  }
+  #icoCont {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #footerWrap {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
 /*# sourceMappingURL=Footer.css.map */

@@ -11,8 +11,8 @@ import "react-toastify/dist/ReactToastify.css";
 const Home = () => {
   const [logged, setLogged] = useState("loggedOUT");
   const [userName, setUserName] = useState("");
-  const [hamMenu, setHamMenu] = useState("");
-  const [overlay, setOverlay] = useState("");
+  const [hamMenu, setHamMenu] = useState("hamMenuClosed");
+  const [overlay, setOverlay] = useState("overlayClosed");
   const [regButton, setRegButton] = useState("closedRegBtn");
   const [logButton, setLogButton] = useState("closedLogBtn");
 
