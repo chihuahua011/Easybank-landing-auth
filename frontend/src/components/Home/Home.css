@@ -142,6 +142,8 @@ a:hover {
       align-self: center;
   -ms-grid-column: 4;
   grid-column: 4;
+  -ms-grid-row: 1;
+  grid-row: 1;
   width: 130px;
   height: 40px;
   font-weight: 700;
@@ -196,12 +198,22 @@ p {
     position: fixed;
     height: 65px;
   }
+  .header p {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 740px) {
   .header {
     -ms-grid-columns: 160px auto auto auto;
         grid-template-columns: 160px auto auto auto;
+  }
+  .header p {
+    z-index: 101;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
   }
   .linksCont {
     position: absolute;
@@ -229,6 +241,12 @@ p {
   #logBtn {
     -ms-grid-column: 2;
     grid-column: 2;
+  }
+  #logOut {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 1;
+    grid-row: 1;
   }
   .hamBtn {
     display: block;
@@ -288,6 +306,16 @@ p {
     -ms-grid-columns: 160px auto;
         grid-template-columns: 160px auto;
   }
+  .header p {
+    position: absolute;
+    grid-column: unset;
+    grid-row: unset;
+    top: 310px;
+    -webkit-transition: -webkit-transform 550ms ease-in-out;
+    transition: -webkit-transform 550ms ease-in-out;
+    transition: transform 550ms ease-in-out;
+    transition: transform 550ms ease-in-out, -webkit-transform 550ms ease-in-out;
+  }
   #regBtn {
     grid-column: unset;
     -webkit-transition: -webkit-transform 500ms ease-in-out;
@@ -304,6 +332,16 @@ p {
     transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
     top: 300px;
   }
+  #logOut {
+    position: absolute;
+    grid-column: unset;
+    grid-row: unset;
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    transition: -webkit-transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+    top: 350px;
+  }
   .openLogBtn {
     position: absolute;
   }
@@ -317,6 +355,10 @@ p {
   }
   .closedRegBtn {
     position: absolute;
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  .closedLogout {
     -webkit-transform: translateX(-500px);
             transform: translateX(-500px);
   }

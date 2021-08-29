@@ -15,6 +15,7 @@ const Home = () => {
   const [overlay, setOverlay] = useState("overlayClosed");
   const [regButton, setRegButton] = useState("closedRegBtn");
   const [logButton, setLogButton] = useState("closedLogBtn");
+  const [logout, setLogout] = useState("closedLogout")
 
   const token = localStorage.getItem("token")
   console.log(token)
@@ -63,11 +64,13 @@ const Home = () => {
       setOverlay("overlay");
       setLogButton("openLogBtn");
       setRegButton("openRegBtn")
+      setLogout("")
     } else {
       setHamMenu("hamMenuClosed");
       setOverlay("overlayClosed");
       setLogButton("closedLogBtn");
-      setRegButton("closedRegBtn")
+      setRegButton("closedRegBtn");
+      setLogout("closedLogout");
     }
   }
 
@@ -84,8 +87,8 @@ const Home = () => {
         </div>
         <Link id="regBtn" to="/register" className={logged + " " + regButton}>Register</Link>
         <Link id="logBtn" to="/login" className={logged + " " + logButton}>Login</Link>
-        <p className={logged}>Welcome back {userName}!</p>
-        <button id="logOut" className={logged} onClick={logOut}>Log out</button>
+        <p className={logged + " " + logout}>Welcome back {userName}!</p>
+        <button id="logOut" className={logged + " " + logout} onClick={logOut}>Log out</button>
         <button className="hamBtn" onClick={click}>
           <span></span>
           <span></span>
