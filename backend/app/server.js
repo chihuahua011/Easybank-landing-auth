@@ -4,8 +4,8 @@ const path = require("path");
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = require("./model/user");
-const PORT = 8000;
+const User = require("../model/user");
+const PORT = 3000;
 const app = express();
 require("dotenv").config();
 
@@ -22,12 +22,8 @@ mongoose.connect(
 //MIDDLEWARES
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "../frontend/build")));
-
 app.use(
-    cors({
-        origin: "http://localhost:3000",
-    })
+    cors()
 );
 
 //ROUTES

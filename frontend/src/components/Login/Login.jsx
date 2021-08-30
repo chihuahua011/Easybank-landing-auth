@@ -20,7 +20,7 @@ const Login = () => {
 
   const logSubmit = () => {
     axios
-      .post("http://localhost:8000/api/login", {
+      .post("https://easybank.sloppy.zone/api/login", {
         email: logEmail,
         password: logPass,
       })

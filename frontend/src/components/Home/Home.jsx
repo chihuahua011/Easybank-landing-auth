@@ -19,15 +19,13 @@ const Home = () => {
   const [bodyClass, setBodyClass] = useState(false)
 
   const token = localStorage.getItem("token")
-  console.log(token)
 
   useEffect (() => {
-    axios.post("http://localhost:8000/api/user", {
+    axios.post("https://easybank.sloppy.zone/api/user", {
       token: token
     })
     .then((res) => {
       if(res.status === 200) {
-        console.log(res.data)
         setLogged("loggedIN")
         setUserName(res.data.user.name)
       }
@@ -46,7 +44,7 @@ const Home = () => {
 
   //The onClick event for the logout
   const logOut = () => {
-    axios.post("http://localhost:8000/api/user", {
+    axios.post("https://easybank.sloppy.zone/api/user", {
       token: token
     })
     .then((res) => {

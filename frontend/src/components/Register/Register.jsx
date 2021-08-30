@@ -19,7 +19,7 @@ const Register = () => {
 
   const regSubmit = () => {
     axios
-      .post("http://localhost:8000/api/register", {
+      .post("https://easybank.sloppy.zone/api/register", {
         name: regName,
         email: regEmail,
         password: regPass,
