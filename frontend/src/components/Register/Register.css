@@ -6,6 +6,7 @@
 }
 
 #regCont {
+  position: relative;
   margin: 80px auto 0 auto;
   width: 300px;
   height: 300px;
@@ -17,8 +18,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border: #31d35c 2px solid;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   border-radius: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -26,7 +25,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffffffd5;
+  background-color: #fffffff3;
   z-index: 100;
 }
 
@@ -103,5 +102,31 @@
   bottom: 20px;
   color: #da2b2b;
   font-size: 12px;
+}
+
+@media screen and (max-width: 900px) {
+  #regSection {
+    height: 100vh;
+  }
+  #regCont {
+    margin: 160px auto 0 auto;
+  }
+  .bgPlanes {
+    top: 60px;
+  }
+  .mockups {
+    top: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mockups {
+    right: -80%;
+  }
+  .bgPlanes {
+    -o-object-position: 0 90%;
+       object-position: 0 90%;
+    height: 650px;
+  }
 }
 /*# sourceMappingURL=Register.css.map */

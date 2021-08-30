@@ -15,7 +15,8 @@ const Home = () => {
   const [overlay, setOverlay] = useState("overlayClosed");
   const [regButton, setRegButton] = useState("closedRegBtn");
   const [logButton, setLogButton] = useState("closedLogBtn");
-  const [logout, setLogout] = useState("closedLogout")
+  const [logout, setLogout] = useState("closedLogout");
+  const [bodyClass, setBodyClass] = useState(false)
 
   const token = localStorage.getItem("token")
   console.log(token)
@@ -59,6 +60,7 @@ const Home = () => {
   }
 
   const click = () => {
+    setBodyClass(!bodyClass);
     if(hamMenu === "hamMenuClosed") {
       setHamMenu("hamMenu");
       setOverlay("overlay");
@@ -73,6 +75,10 @@ const Home = () => {
       setLogout("closedLogout");
     }
   }
+
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", bodyClass)
+  }, [bodyClass])
 
   return (
     <Router>

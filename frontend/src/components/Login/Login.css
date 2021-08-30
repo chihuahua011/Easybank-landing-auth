@@ -22,4 +22,10 @@
 .logSubmit:hover {
   opacity: 0.6;
 }
+
+@media screen and (max-width: 900px) {
+  #logSection {
+    height: 100vh;
+  }
+}
 /*# sourceMappingURL=Login.css.map */

@@ -1,3 +1,7 @@
+.menu-open {
+  overflow: hidden;
+}
+
 a {
   display: inline-block;
   position: relative;
@@ -153,6 +157,7 @@ a:hover {
   background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
   border-radius: 20px;
   text-align: center;
+  cursor: pointer;
   -webkit-transition: opacity 200ms ease-in-out;
   transition: opacity 200ms ease-in-out;
 }
