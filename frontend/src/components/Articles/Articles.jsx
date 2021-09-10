@@ -14,7 +14,7 @@ const Articles = () => {
                     <div className="artListWrap">
                         <img src={Currency} alt="currency" />
                         <p>By Claire Robinson</p>
-                        <a href="">
+                        <a href="#">
                             Recieve money in any currency with no fees
                         </a>
                         <p>
@@ -26,7 +26,7 @@ const Articles = () => {
                     <div className="artListWrap">
                         <img src={Restaurant} alt="restaurant" />
                         <p>By Wilson Hutton</p>
-                        <a href="">
+                        <a href="#">
                             Treat yourself without worrying about money
                         </a>
                         <p>
@@ -38,7 +38,7 @@ const Articles = () => {
                     <div className="artListWrap">
                         <img src={Plane} alt="plane" />
                         <p>By Claire Robinson</p>
-                        <a href="">Take your Easybank card wherever you go</a>
+                        <a href="#">Take your Easybank card wherever you go</a>
                         <p>
                             We want you to enjoy your travels. This is why we
                             don't charge any fees on purchases while you're
@@ -48,7 +48,7 @@ const Articles = () => {
                     <div className="artListWrap">
                         <img src={Confetti} alt="confetti" />
                         <p>By Claire Robinson</p>
-                        <a href="">
+                        <a href="#">
                             Our invite-only Beta accounts are now live!
                         </a>
                         <p>
