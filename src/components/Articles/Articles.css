@@ -54,18 +54,18 @@
   font-size: 10px;
 }
 
-.artListWrap a {
-  display: inline-block;
+.artListWrap button {
   font-size: 16px;
   margin: 0 0 15px 0;
   padding: 0 30px 0 20px;
   color: #2d314d;
   cursor: pointer;
+  text-align: left;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
 }
 
-.artListWrap a:hover {
+.artListWrap button:hover {
   color: #31d35c;
 }
 

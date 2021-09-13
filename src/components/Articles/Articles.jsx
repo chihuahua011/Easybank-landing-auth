@@ -14,9 +14,9 @@ const Articles = () => {
                     <div className="artListWrap">
                         <img src={Currency} alt="currency" />
                         <p>By Claire Robinson</p>
-                        <a href="#">
+                        <button href="#">
                             Recieve money in any currency with no fees
-                        </a>
+                        </button>
                         <p>
                             The world is getting smaller and we're becoming more
                             mobile. So why should you be forced to only recieve
@@ -26,9 +26,9 @@ const Articles = () => {
                     <div className="artListWrap">
                         <img src={Restaurant} alt="restaurant" />
                         <p>By Wilson Hutton</p>
-                        <a href="#">
+                        <button href="#">
                             Treat yourself without worrying about money
-                        </a>
+                        </button>
                         <p>
                             Our sinple budgeting feature allows you to separate
                             out your spending and set realistic limits each
@@ -38,7 +38,7 @@ const Articles = () => {
                     <div className="artListWrap">
                         <img src={Plane} alt="plane" />
                         <p>By Claire Robinson</p>
-                        <a href="#">Take your Easybank card wherever you go</a>
+                        <button href="#">Take your Easybank card wherever you go</button>
                         <p>
                             We want you to enjoy your travels. This is why we
                             don't charge any fees on purchases while you're
@@ -48,9 +48,9 @@ const Articles = () => {
                     <div className="artListWrap">
                         <img src={Confetti} alt="confetti" />
                         <p>By Claire Robinson</p>
-                        <a href="#">
+                        <button href="#">
                             Our invite-only Beta accounts are now live!
-                        </a>
+                        </button>
                         <p>
                             After a lot of hard work by the whole team, we're
                             excited to launch our closed beta. It's easy to
