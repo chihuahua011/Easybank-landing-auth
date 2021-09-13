@@ -19,7 +19,7 @@ const Register = () => {
 
   const regSubmit = () => {
     axios
-      .post("https://easybank.sloppy.zone/api/register", {
+      .post("https://easybank-be.herokuapp.com/api/register", {
         name: regName,
         email: regEmail,
         password: regPass,

@@ -21,7 +21,7 @@ const Home = () => {
   const token = localStorage.getItem("token")
 
   useEffect (() => {
-    axios.post("https://easybank.sloppy.zone/api/user", {
+    axios.post("https://easybank-be.herokuapp.com/api/user", {
       token: token
     })
     .then((res) => {
@@ -44,7 +44,7 @@ const Home = () => {
 
   //The onClick event for the logout
   const logOut = () => {
-    axios.post("https://easybank.sloppy.zone/api/user", {
+    axios.post("https://easybank-be.herokuapp.com/api/user", {
       token: token
     })
     .then((res) => {

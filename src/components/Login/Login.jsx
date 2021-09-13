@@ -20,7 +20,7 @@ const Login = () => {
 
   const logSubmit = () => {
     axios
-      .post("https://easybank.sloppy.zone/api/login", {
+      .post("https://easybank-be.herokuapp.com/api/login", {
         email: logEmail,
         password: logPass,
       })
